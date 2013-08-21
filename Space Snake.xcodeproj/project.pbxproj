@@ -17,13 +17,17 @@
 		C911C98A17C5215400908D54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C911C98817C5215400908D54 /* Main.storyboard */; };
 		C911C98D17C5215400908D54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C911C98C17C5215400908D54 /* ViewController.m */; };
 		C911C99017C5215400908D54 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C911C98F17C5215400908D54 /* MyScene.m */; };
-		C911C99217C5215400908D54 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = C911C99117C5215400908D54 /* Spaceship.png */; };
 		C911C99417C5215400908D54 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C911C99317C5215400908D54 /* Images.xcassets */; };
 		C911C99B17C5215400908D54 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911C99A17C5215400908D54 /* XCTest.framework */; };
 		C911C99C17C5215400908D54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911C97417C5215400908D54 /* Foundation.framework */; };
 		C911C99D17C5215400908D54 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911C97817C5215400908D54 /* UIKit.framework */; };
 		C911C9A517C5215400908D54 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C911C9A317C5215400908D54 /* InfoPlist.strings */; };
 		C911C9A717C5215400908D54 /* Space_SnakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C911C9A617C5215400908D54 /* Space_SnakeTests.m */; };
+		C911C9B617C52FED00908D54 /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = C911C9B517C52FED00908D54 /* Snake.m */; };
+		C911C9B917C5304400908D54 /* SnakeElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C911C9B817C5304400908D54 /* SnakeElement.m */; };
+		C911C9BC17C53AD900908D54 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = C911C9BB17C53AD900908D54 /* Game.m */; };
+		C911C9BE17C54E1B00908D54 /* playerShip.png in Resources */ = {isa = PBXBuildFile; fileRef = C911C9BD17C54E1B00908D54 /* playerShip.png */; };
+		C911C9C017C54F5500908D54 /* iceAsteroidsBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C911C9BF17C54F5500908D54 /* iceAsteroidsBackground.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +57,20 @@
 		C911C98C17C5215400908D54 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C911C98E17C5215400908D54 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
 		C911C98F17C5215400908D54 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
-		C911C99117C5215400908D54 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		C911C99317C5215400908D54 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C911C99917C5215400908D54 /* Space SnakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Space SnakeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C911C99A17C5215400908D54 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C911C9A217C5215400908D54 /* Space SnakeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Space SnakeTests-Info.plist"; sourceTree = "<group>"; };
 		C911C9A417C5215400908D54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C911C9A617C5215400908D54 /* Space_SnakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Space_SnakeTests.m; sourceTree = "<group>"; };
+		C911C9B417C52FED00908D54 /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snake.h; sourceTree = "<group>"; };
+		C911C9B517C52FED00908D54 /* Snake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snake.m; sourceTree = "<group>"; };
+		C911C9B717C5304400908D54 /* SnakeElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnakeElement.h; sourceTree = "<group>"; };
+		C911C9B817C5304400908D54 /* SnakeElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnakeElement.m; sourceTree = "<group>"; };
+		C911C9BA17C53AD900908D54 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		C911C9BB17C53AD900908D54 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		C911C9BD17C54E1B00908D54 /* playerShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerShip.png; sourceTree = "<group>"; };
+		C911C9BF17C54F5500908D54 /* iceAsteroidsBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iceAsteroidsBackground.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +139,7 @@
 				C911C98C17C5215400908D54 /* ViewController.m */,
 				C911C98E17C5215400908D54 /* MyScene.h */,
 				C911C98F17C5215400908D54 /* MyScene.m */,
-				C911C99117C5215400908D54 /* Spaceship.png */,
-				C911C99317C5215400908D54 /* Images.xcassets */,
+				C911C9B317C52FD700908D54 /* Model */,
 				C911C97D17C5215400908D54 /* Supporting Files */,
 			);
 			path = "Space Snake";
@@ -138,6 +148,7 @@
 		C911C97D17C5215400908D54 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C911C9B017C523CF00908D54 /* Art */,
 				C911C97E17C5215400908D54 /* Space Snake-Info.plist */,
 				C911C97F17C5215400908D54 /* InfoPlist.strings */,
 				C911C98217C5215400908D54 /* main.m */,
@@ -162,6 +173,29 @@
 				C911C9A317C5215400908D54 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C911C9B017C523CF00908D54 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				C911C9BF17C54F5500908D54 /* iceAsteroidsBackground.jpg */,
+				C911C9BD17C54E1B00908D54 /* playerShip.png */,
+				C911C99317C5215400908D54 /* Images.xcassets */,
+			);
+			name = Art;
+			sourceTree = "<group>";
+		};
+		C911C9B317C52FD700908D54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C911C9B417C52FED00908D54 /* Snake.h */,
+				C911C9B517C52FED00908D54 /* Snake.m */,
+				C911C9B717C5304400908D54 /* SnakeElement.h */,
+				C911C9B817C5304400908D54 /* SnakeElement.m */,
+				C911C9BA17C53AD900908D54 /* Game.h */,
+				C911C9BB17C53AD900908D54 /* Game.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +276,8 @@
 			files = (
 				C911C98117C5215400908D54 /* InfoPlist.strings in Resources */,
 				C911C99417C5215400908D54 /* Images.xcassets in Resources */,
-				C911C99217C5215400908D54 /* Spaceship.png in Resources */,
+				C911C9C017C54F5500908D54 /* iceAsteroidsBackground.jpg in Resources */,
+				C911C9BE17C54E1B00908D54 /* playerShip.png in Resources */,
 				C911C98A17C5215400908D54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,9 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C911C9B617C52FED00908D54 /* Snake.m in Sources */,
 				C911C99017C5215400908D54 /* MyScene.m in Sources */,
 				C911C98D17C5215400908D54 /* ViewController.m in Sources */,
+				C911C9B917C5304400908D54 /* SnakeElement.m in Sources */,
 				C911C98717C5215400908D54 /* AppDelegate.m in Sources */,
+				C911C9BC17C53AD900908D54 /* Game.m in Sources */,
 				C911C98317C5215400908D54 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

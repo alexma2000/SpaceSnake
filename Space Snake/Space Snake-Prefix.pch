@@ -13,4 +13,22 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <SpriteKit/SpriteKit.h>
 #endif
+
+#define CONSTANTSPEEDFACTOR 6
+
+typedef enum kHeading {
+    
+    kWest = 0,
+    kNorth = 1,
+    kEast = 2,
+    kSouth = 3
+    
+} kHeading;
+
+typedef enum kShipType {
+    
+    kShipTypePlayer = 0
+    
+} kShipType;
