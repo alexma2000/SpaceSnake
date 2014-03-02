@@ -14,28 +14,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
 
+-(void)viewWillLayoutSubviews
+{
     // Configure the view.
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
     
-    // Create and configure the scene.
-    SKScene * scene = [MyScene sceneWithSize:CGSizeMake(1024, 748)];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
-    
-    // Present the scene.
-    [skView presentScene:scene];
-}
+    if (!skView.scene) {
 
+        SKScene * scene = [MyScene sceneWithSize:CGSizeMake(1024, 748)];
+        scene.scaleMode = SKSceneScaleModeAspectFill;
+        [skView presentScene:scene];
+    }
+}
 - (BOOL)shouldAutorotate
 {
-    return NO;
+    return YES;
 }
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationLandscapeRight;
+    return UIInterfaceOrientationMaskLandscape;
 }
 
 - (void)didReceiveMemoryWarning

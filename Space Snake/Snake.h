@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) NSMutableArray *elements;
 @property (strong, nonatomic) SnakeElement *head;
+@property (strong, nonatomic) NSMutableArray *rotationPoints;
 
 - (CGPoint) velocity;
 - (void) setVelocity:(CGPoint)newVelocity;

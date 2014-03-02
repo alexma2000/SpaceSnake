@@ -510,6 +510,7 @@
 				C911C9AC17C5215400908D54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C911C9AD17C5215400908D54 /* Build configuration list for PBXNativeTarget "Space SnakeTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +519,7 @@
 				C911C9AF17C5215400908D54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

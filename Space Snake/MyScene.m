@@ -17,8 +17,19 @@
         /* Setup your scene here */
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
+        [self performSelector:@selector(addElementToSnake) withObject:self afterDelay:3.0];
     }
     return self;
+}
+
+- (void) addElementToSnake
+{
+    SnakeElement *second = [[SnakeElement alloc] initWithType:kShipTypePlayer];
+    second.sprite.position = CGPointMake(self.playerSnake.head.sprite.position.x + self.playerSnake.velocity.x * 2 , self.playerSnake.head.sprite.position.y + self.playerSnake.velocity.y * 2);
+    second.velocity = self.playerSnake.velocity;
+    [self addChild:second.sprite];
+    [self.playerSnake.elements addObject:second];
+    
 }
 
 -(void) didMoveToView:(SKView *)view
@@ -119,6 +130,7 @@
 
     SKAction *action = [SKAction rotateToAngle:0.0 duration:0.2 shortestUnitArc:YES];
     [self.playerSnake.head.sprite runAction:action];
+
 }
 
 -(void)update:(CFTimeInterval)currentTime {
@@ -128,12 +140,42 @@
         return;
     }
     
+    
     CFTimeInterval delta = self.lastTime - currentTime;
     
     CGPoint currentPosition = self.playerSnake.head.sprite.position;
     CGPoint velocity = self.playerSnake.velocity;
     
     self.playerSnake.head.sprite.position = CGPointMake(currentPosition.x + velocity.x * delta * CONSTANTSPEEDFACTOR , currentPosition.y + velocity.y * delta * CONSTANTSPEEDFACTOR);
+    
+    for (SnakeElement *element in self.playerSnake.elements) {
+        
+        CGPoint currentPositionE = element.sprite.position;
+        CGPoint velocityE = element.velocity;
+        
+        element.sprite.position = CGPointMake(currentPositionE.x + velocityE.x * delta * CONSTANTSPEEDFACTOR , currentPositionE.y + velocityE.y * delta * CONSTANTSPEEDFACTOR);
+    }
+    
+    for ( __strong NSString *coordinate in self.playerSnake.rotationPoints) {
+        
+        CGPoint temp = CGPointFromString(coordinate);
+        
+        for (SnakeElement *element in self.playerSnake.elements) {
+            
+            int xDifference = element.sprite.position.x - temp.x;
+            int yDifference = element.sprite.position.y - temp.y;
+            
+            if ((xDifference > -3 && xDifference < 3) && (yDifference > -3 && yDifference < 3)   ) {
+                
+                element.velocity = self.playerSnake.velocity;
+                
+                SKAction *action = [SKAction rotateToAngle:self.playerSnake.head.sprite.zRotation duration:0.2 shortestUnitArc:YES];
+                [element.sprite runAction:action];
+                
+                coordinate = NSStringFromCGPoint(CGPointMake(-1000, -1000));
+            }
+        }
+    }
     
     self.lastTime = currentTime;
 }

@@ -17,11 +17,11 @@
     if (!self) {
         return nil;
     }
-    
+    self.rotationPoints = [[NSMutableArray alloc] init];
     self.elements = [[NSMutableArray alloc] initWithCapacity:10];
     self.head = [[SnakeElement alloc] initWithType:kShipTypePlayer];
     self.head.elementInFront = self.head;
-    [self.elements addObject:self.head];
+    //[self.elements addObject:self.head];
     
     return self;
 }
@@ -34,6 +34,7 @@
 - (void) setVelocity:(CGPoint)newVelocity;
 {
     self.head.velocity = newVelocity;
+    [self.rotationPoints addObject:NSStringFromCGPoint(self.head.sprite.position)];
 }
 
 
