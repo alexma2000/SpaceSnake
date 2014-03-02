@@ -17,5 +17,6 @@
 
 - (CGPoint) velocity;
 - (void) setVelocity:(CGPoint)newVelocity;
+- (void)addElement:(SnakeElement *)element;
 
 @end

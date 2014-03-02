@@ -17,7 +17,7 @@
         /* Setup your scene here */
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
-        [self performSelector:@selector(addElementToSnake) withObject:self afterDelay:3.0];
+        [self performSelector:@selector(addElementToSnake) withObject:self afterDelay:2.0];
     }
     return self;
 }
@@ -25,18 +25,15 @@
 - (void) addElementToSnake
 {
     SnakeElement *second = [[SnakeElement alloc] initWithType:kShipTypePlayer];
-    second.sprite.position = CGPointMake(self.playerSnake.head.sprite.position.x + self.playerSnake.velocity.x * 2 , self.playerSnake.head.sprite.position.y + self.playerSnake.velocity.y * 2);
-    second.velocity = self.playerSnake.velocity;
+    [self.playerSnake addElement:second];
     [self addChild:second.sprite];
-    [self.playerSnake.elements addObject:second];
-    
 }
 
 -(void) didMoveToView:(SKView *)view
 {
-    self.background = [[SKSpriteNode alloc] initWithImageNamed:@"iceAsteroidsBackground.jpg"];
-    self.background.position = CGPointMake(512, 384);
-    [self addChild:self.background];
+//    self.background = [[SKSpriteNode alloc] initWithImageNamed:@"iceAsteroidsBackground.jpg"];
+//    self.background.position = CGPointMake(512, 384);
+//    [self addChild:self.background];
     
     [[Game sharedGame] makeNewPlayerSnake];
     self.playerSnake = [Game sharedGame].playerSnake;
@@ -165,9 +162,10 @@
             int xDifference = element.sprite.position.x - temp.x;
             int yDifference = element.sprite.position.y - temp.y;
             
-            if ((xDifference > -3 && xDifference < 3) && (yDifference > -3 && yDifference < 3)   ) {
+            if ((xDifference > -2 && xDifference < 2) && (yDifference > -2 && yDifference < 2)   ) {
                 
                 element.velocity = self.playerSnake.velocity;
+                element.sprite.position = CGPointMake(element.sprite.position.x + xDifference, element.sprite.position.y + yDifference);
                 
                 SKAction *action = [SKAction rotateToAngle:self.playerSnake.head.sprite.zRotation duration:0.2 shortestUnitArc:YES];
                 [element.sprite runAction:action];

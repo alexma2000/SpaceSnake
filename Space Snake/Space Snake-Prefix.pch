@@ -16,7 +16,7 @@
     #import <SpriteKit/SpriteKit.h>
 #endif
 
-#define CONSTANTSPEEDFACTOR 4
+#define CONSTANTSPEEDFACTOR 6
 
 typedef enum kHeading {
     
