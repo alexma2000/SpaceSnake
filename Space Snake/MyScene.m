@@ -156,6 +156,9 @@
         element.sprite.position = CGPointMake(currentPositionE.x + velocityE.x * delta * CONSTANTSPEEDFACTOR , currentPositionE.y + velocityE.y * delta * CONSTANTSPEEDFACTOR);
     }
     
+    BOOL markToDelete = NO;
+    NSDictionary *deleteDictionary;
+    
     for (NSDictionary *dict in self.playerSnake.rotationPoints) {
         
         CGPoint positionCoordinate = CGPointFromString(dict[@"position"]);
@@ -172,9 +175,15 @@
                 element.sprite.position = CGPointMake(element.sprite.position.x + xDifference, element.sprite.position.y + yDifference);
                 SKAction *action = [SKAction rotateToAngle:self.playerSnake.head.sprite.zRotation duration:0.2 shortestUnitArc:YES];
                 [element.sprite runAction:action];
+                if ([element isEqual:[self.playerSnake.elements lastObject]]) {
+                    markToDelete = YES;
+                    deleteDictionary = dict;
+                }
             }
         }
     }
+    
+    [self.playerSnake.rotationPoints removeObject:deleteDictionary];
     
     self.lastTime = currentTime;
 }
