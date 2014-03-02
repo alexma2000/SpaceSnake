@@ -38,7 +38,25 @@
     NSString *velocity = NSStringFromCGPoint(newVelocity);
     NSString *spritePosition = NSStringFromCGPoint(self.head.sprite.position);
     
-    [self.rotationPoints addObject:@{@"velocity": velocity, @"position" : spritePosition}];
+    double angle;
+    
+    if (newVelocity.x > 1) {
+        angle = -1.570796;
+    }
+    
+    if (newVelocity.x < -1) {
+        angle = 1.570796;
+    }
+    
+    if (newVelocity.y > 1) {
+        angle = 0.0;
+    }
+    
+    if (newVelocity.y < -1) {
+        angle = 3.14;
+    }
+    
+    [self.rotationPoints addObject:@{@"velocity": velocity, @"position" : spritePosition, @"angle" : @(angle)}];
 }
 
 - (void)addElement:(SnakeElement *)element

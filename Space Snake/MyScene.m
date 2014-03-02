@@ -163,6 +163,7 @@
         
         CGPoint positionCoordinate = CGPointFromString(dict[@"position"]);
         CGPoint velocityNew = CGPointFromString(dict[@"velocity"]);
+        double newAngle = [dict[@"angle"] doubleValue];
         
         for (SnakeElement *element in self.playerSnake.elements) {
             
@@ -173,7 +174,7 @@
                 
                 element.velocity = velocityNew;
                 element.sprite.position = CGPointMake(element.sprite.position.x + xDifference, element.sprite.position.y + yDifference);
-                SKAction *action = [SKAction rotateToAngle:self.playerSnake.head.sprite.zRotation duration:0.2 shortestUnitArc:YES];
+                SKAction *action = [SKAction rotateToAngle:newAngle duration:0.2 shortestUnitArc:YES];
                 [element.sprite runAction:action];
                 if ([element isEqual:[self.playerSnake.elements lastObject]]) {
                     markToDelete = YES;
