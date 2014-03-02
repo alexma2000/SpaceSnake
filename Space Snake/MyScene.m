@@ -18,7 +18,10 @@
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         [self performSelector:@selector(addElementToSnake) withObject:self afterDelay:2.0];
+        [self performSelector:@selector(addElementToSnake) withObject:self afterDelay:4.0];
+        [self performSelector:@selector(addElementToSnake) withObject:self afterDelay:6.0];
     }
+    
     return self;
 }
 
