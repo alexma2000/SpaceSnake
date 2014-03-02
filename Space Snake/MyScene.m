@@ -153,24 +153,22 @@
         element.sprite.position = CGPointMake(currentPositionE.x + velocityE.x * delta * CONSTANTSPEEDFACTOR , currentPositionE.y + velocityE.y * delta * CONSTANTSPEEDFACTOR);
     }
     
-    for ( __strong NSString *coordinate in self.playerSnake.rotationPoints) {
+    for (NSDictionary *dict in self.playerSnake.rotationPoints) {
         
-        CGPoint temp = CGPointFromString(coordinate);
+        CGPoint positionCoordinate = CGPointFromString(dict[@"position"]);
+        CGPoint velocityNew = CGPointFromString(dict[@"velocity"]);
         
         for (SnakeElement *element in self.playerSnake.elements) {
             
-            int xDifference = element.sprite.position.x - temp.x;
-            int yDifference = element.sprite.position.y - temp.y;
+            int xDifference = element.sprite.position.x - positionCoordinate.x;
+            int yDifference = element.sprite.position.y - positionCoordinate.y;
             
             if ((xDifference > -2 && xDifference < 2) && (yDifference > -2 && yDifference < 2)   ) {
                 
-                element.velocity = self.playerSnake.velocity;
+                element.velocity = velocityNew;
                 element.sprite.position = CGPointMake(element.sprite.position.x + xDifference, element.sprite.position.y + yDifference);
-                
                 SKAction *action = [SKAction rotateToAngle:self.playerSnake.head.sprite.zRotation duration:0.2 shortestUnitArc:YES];
                 [element.sprite runAction:action];
-                
-                coordinate = NSStringFromCGPoint(CGPointMake(-1000, -1000));
             }
         }
     }

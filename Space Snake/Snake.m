@@ -35,12 +35,19 @@
 {
     self.head.velocity = newVelocity;
     
-    [self.rotationPoints addObject:NSStringFromCGPoint(self.head.sprite.position)];
+    NSString *velocity = NSStringFromCGPoint(newVelocity);
+    NSString *spritePosition = NSStringFromCGPoint(self.head.sprite.position);
+    
+    [self.rotationPoints addObject:@{@"velocity": velocity, @"position" : spritePosition}];
 }
 
 - (void)addElement:(SnakeElement *)element
 {
     SnakeElement *lastElement = [self.elements lastObject];
+    if (!lastElement) {
+        lastElement = self.head;
+    }
+    
     [self.elements addObject:element];
     element.sprite.position = CGPointMake(lastElement.sprite.position.x + lastElement.velocity.x * 2.5 , lastElement.sprite.position.y + lastElement.velocity.y * 2.5);
     element.sprite.zRotation = lastElement.sprite.zRotation;
