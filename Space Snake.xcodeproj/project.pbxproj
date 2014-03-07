@@ -11,6 +11,13 @@
 		0A317D1318C9C14000E6B642 /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A317D1118C9C14000E6B642 /* ship.png */; };
 		0A317D1618C9C7DF00E6B642 /* ship_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A317D1418C9C7DF00E6B642 /* ship_left.png */; };
 		0A317D1718C9C7DF00E6B642 /* ship_north.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A317D1518C9C7DF00E6B642 /* ship_north.png */; };
+		0A317D2118CA2F9400E6B642 /* enterprise.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0A317D2018CA2F9400E6B642 /* enterprise.atlas */; };
+		0A317D2818CA3F1100E6B642 /* enterprise_down0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A317D2218CA3F1100E6B642 /* enterprise_down0.png */; };
+		0A317D2918CA3F1100E6B642 /* enterprise_down1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A317D2318CA3F1100E6B642 /* enterprise_down1.png */; };
+		0A317D2A18CA3F1100E6B642 /* enterprise_down2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A317D2418CA3F1100E6B642 /* enterprise_down2.png */; };
+		0A317D2B18CA3F1100E6B642 /* enterprise_down3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A317D2518CA3F1100E6B642 /* enterprise_down3.png */; };
+		0A317D2C18CA3F1100E6B642 /* enterprise_down4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A317D2618CA3F1100E6B642 /* enterprise_down4.png */; };
+		0A317D2D18CA3F1100E6B642 /* enterprise_down5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A317D2718CA3F1100E6B642 /* enterprise_down5.png */; };
 		C911C97517C5215400908D54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911C97417C5215400908D54 /* Foundation.framework */; };
 		C911C97717C5215400908D54 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911C97617C5215400908D54 /* CoreGraphics.framework */; };
 		C911C97917C5215400908D54 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911C97817C5215400908D54 /* UIKit.framework */; };
@@ -49,6 +56,13 @@
 		0A317D1118C9C14000E6B642 /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
 		0A317D1418C9C7DF00E6B642 /* ship_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship_left.png; sourceTree = "<group>"; };
 		0A317D1518C9C7DF00E6B642 /* ship_north.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship_north.png; sourceTree = "<group>"; };
+		0A317D2018CA2F9400E6B642 /* enterprise.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = enterprise.atlas; sourceTree = "<group>"; };
+		0A317D2218CA3F1100E6B642 /* enterprise_down0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enterprise_down0.png; path = enterprise.atlas/enterprise_down0.png; sourceTree = "<group>"; };
+		0A317D2318CA3F1100E6B642 /* enterprise_down1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enterprise_down1.png; path = enterprise.atlas/enterprise_down1.png; sourceTree = "<group>"; };
+		0A317D2418CA3F1100E6B642 /* enterprise_down2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enterprise_down2.png; path = enterprise.atlas/enterprise_down2.png; sourceTree = "<group>"; };
+		0A317D2518CA3F1100E6B642 /* enterprise_down3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enterprise_down3.png; path = enterprise.atlas/enterprise_down3.png; sourceTree = "<group>"; };
+		0A317D2618CA3F1100E6B642 /* enterprise_down4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enterprise_down4.png; path = enterprise.atlas/enterprise_down4.png; sourceTree = "<group>"; };
+		0A317D2718CA3F1100E6B642 /* enterprise_down5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enterprise_down5.png; path = enterprise.atlas/enterprise_down5.png; sourceTree = "<group>"; };
 		C911C97117C5215400908D54 /* Space Snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space Snake.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C911C97417C5215400908D54 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C911C97617C5215400908D54 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -186,6 +200,13 @@
 		C911C9B017C523CF00908D54 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				0A317D2218CA3F1100E6B642 /* enterprise_down0.png */,
+				0A317D2318CA3F1100E6B642 /* enterprise_down1.png */,
+				0A317D2418CA3F1100E6B642 /* enterprise_down2.png */,
+				0A317D2518CA3F1100E6B642 /* enterprise_down3.png */,
+				0A317D2618CA3F1100E6B642 /* enterprise_down4.png */,
+				0A317D2718CA3F1100E6B642 /* enterprise_down5.png */,
+				0A317D2018CA2F9400E6B642 /* enterprise.atlas */,
 				0A317D1418C9C7DF00E6B642 /* ship_left.png */,
 				0A317D1518C9C7DF00E6B642 /* ship_north.png */,
 				0A317D1018C9C14000E6B642 /* ship_right.png */,
@@ -288,12 +309,19 @@
 			files = (
 				0A317D1218C9C14000E6B642 /* ship_right.png in Resources */,
 				C911C98117C5215400908D54 /* InfoPlist.strings in Resources */,
+				0A317D2B18CA3F1100E6B642 /* enterprise_down3.png in Resources */,
+				0A317D2118CA2F9400E6B642 /* enterprise.atlas in Resources */,
+				0A317D2D18CA3F1100E6B642 /* enterprise_down5.png in Resources */,
 				0A317D1718C9C7DF00E6B642 /* ship_north.png in Resources */,
 				C911C99417C5215400908D54 /* Images.xcassets in Resources */,
 				C911C9C017C54F5500908D54 /* iceAsteroidsBackground.jpg in Resources */,
 				C911C9BE17C54E1B00908D54 /* playerShip.png in Resources */,
+				0A317D2C18CA3F1100E6B642 /* enterprise_down4.png in Resources */,
+				0A317D2A18CA3F1100E6B642 /* enterprise_down2.png in Resources */,
 				C911C98A17C5215400908D54 /* Main.storyboard in Resources */,
+				0A317D2918CA3F1100E6B642 /* enterprise_down1.png in Resources */,
 				0A317D1618C9C7DF00E6B642 /* ship_left.png in Resources */,
+				0A317D2818CA3F1100E6B642 /* enterprise_down0.png in Resources */,
 				0A317D1318C9C14000E6B642 /* ship.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +477,7 @@
 				INFOPLIST_FILE = "Space Snake/Space Snake-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -463,6 +492,7 @@
 				INFOPLIST_FILE = "Space Snake/Space Snake-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

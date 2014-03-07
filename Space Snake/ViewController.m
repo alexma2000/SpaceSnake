@@ -25,7 +25,7 @@
     
     if (!skView.scene) {
 
-        SKScene * scene = [MyScene sceneWithSize:CGSizeMake(1024, 748)];
+        SKScene * scene = [MyScene sceneWithSize:CGSizeMake(1024, 768)];
         scene.scaleMode = SKSceneScaleModeAspectFill;
         [skView presentScene:scene];
     }

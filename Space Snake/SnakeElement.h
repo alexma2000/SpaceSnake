@@ -16,6 +16,9 @@ typedef NS_ENUM(int, kElementHeading)
     kElementHeadingWest
 };
 
+#define ANIMATION_TIME_PER_FRAME 0.15
+
+
 @interface SnakeElement : NSObject
 
 @property (strong, nonatomic) SKSpriteNode *sprite;
