@@ -8,14 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(int, kElementHeading)
+{
+    kElementHeadingNorth = 1,
+    kElementHeadingSouth,
+    kElementHeadingEast,
+    kElementHeadingWest
+};
+
 @interface SnakeElement : NSObject
 
 @property (strong, nonatomic) SKSpriteNode *sprite;
-@property NSInteger heading;
+@property (nonatomic) int heading;
 @property SnakeElement *elementInFront;
 @property CGPoint velocity;
 @property NSInteger type;
 
 - (id) initWithType:(NSInteger) type;
+
+- (void)changeTextureToVertical;
+- (void)changeTextureToHorizontal;
 
 @end

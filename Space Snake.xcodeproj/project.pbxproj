@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A317D1218C9C14000E6B642 /* ship_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A317D1018C9C14000E6B642 /* ship_right.png */; };
+		0A317D1318C9C14000E6B642 /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A317D1118C9C14000E6B642 /* ship.png */; };
+		0A317D1618C9C7DF00E6B642 /* ship_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A317D1418C9C7DF00E6B642 /* ship_left.png */; };
+		0A317D1718C9C7DF00E6B642 /* ship_north.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A317D1518C9C7DF00E6B642 /* ship_north.png */; };
 		C911C97517C5215400908D54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911C97417C5215400908D54 /* Foundation.framework */; };
 		C911C97717C5215400908D54 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911C97617C5215400908D54 /* CoreGraphics.framework */; };
 		C911C97917C5215400908D54 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C911C97817C5215400908D54 /* UIKit.framework */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A317D1018C9C14000E6B642 /* ship_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship_right.png; sourceTree = "<group>"; };
+		0A317D1118C9C14000E6B642 /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
+		0A317D1418C9C7DF00E6B642 /* ship_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship_left.png; sourceTree = "<group>"; };
+		0A317D1518C9C7DF00E6B642 /* ship_north.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship_north.png; sourceTree = "<group>"; };
 		C911C97117C5215400908D54 /* Space Snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space Snake.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C911C97417C5215400908D54 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C911C97617C5215400908D54 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -178,6 +186,10 @@
 		C911C9B017C523CF00908D54 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				0A317D1418C9C7DF00E6B642 /* ship_left.png */,
+				0A317D1518C9C7DF00E6B642 /* ship_north.png */,
+				0A317D1018C9C14000E6B642 /* ship_right.png */,
+				0A317D1118C9C14000E6B642 /* ship.png */,
 				C911C9BF17C54F5500908D54 /* iceAsteroidsBackground.jpg */,
 				C911C9BD17C54E1B00908D54 /* playerShip.png */,
 				C911C99317C5215400908D54 /* Images.xcassets */,
@@ -274,11 +286,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A317D1218C9C14000E6B642 /* ship_right.png in Resources */,
 				C911C98117C5215400908D54 /* InfoPlist.strings in Resources */,
+				0A317D1718C9C7DF00E6B642 /* ship_north.png in Resources */,
 				C911C99417C5215400908D54 /* Images.xcassets in Resources */,
 				C911C9C017C54F5500908D54 /* iceAsteroidsBackground.jpg in Resources */,
 				C911C9BE17C54E1B00908D54 /* playerShip.png in Resources */,
 				C911C98A17C5215400908D54 /* Main.storyboard in Resources */,
+				0A317D1618C9C7DF00E6B642 /* ship_left.png in Resources */,
+				0A317D1318C9C14000E6B642 /* ship.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

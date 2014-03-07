@@ -79,10 +79,12 @@
         return;
     }
     
+    self.playerSnake.head.heading = kElementHeadingWest;
     self.playerSnake.velocity = CGPointMake(-abs(self.playerSnake.velocity.y), 0);
 
-    SKAction *action = [SKAction rotateToAngle:1.570796 duration:0.2 shortestUnitArc:YES];
-    [self.playerSnake.head.sprite runAction:action];
+    
+//    SKAction *action = [SKAction rotateToAngle:1.570796 duration:0.2 shortestUnitArc:YES];
+//    [self.playerSnake.head.sprite runAction:action];
 }
 
 - (void) handleWestRecognizer:(UIGestureRecognizer *)sender
@@ -94,9 +96,10 @@
     }
     
     self.playerSnake.velocity = CGPointMake(abs(self.playerSnake.velocity.y), 0);
+    self.playerSnake.head.heading = kElementHeadingEast;
 
-    SKAction *action = [SKAction rotateToAngle:-1.570796 duration:0.2 shortestUnitArc:YES];
-    [self.playerSnake.head.sprite runAction:action];
+    //SKAction *action = [SKAction rotateToAngle:-1.570796 duration:0.2 shortestUnitArc:YES];
+    //[self.playerSnake.head.sprite runAction:action];
 }
 
 
@@ -111,9 +114,10 @@
     
     self.playerSnake.velocity = CGPointMake(0, -abs(self.playerSnake.velocity.x));
 
+    self.playerSnake.head.heading = kElementHeadingSouth;
     
-    SKAction *action = [SKAction rotateToAngle:3.14 duration:0.2 shortestUnitArc:YES];
-    [self.playerSnake.head.sprite runAction:action];
+//    SKAction *action = [SKAction rotateToAngle:3.14 duration:0.2 shortestUnitArc:YES];
+//    [self.playerSnake.head.sprite runAction:action];
 }
 
 
@@ -127,9 +131,11 @@
     }
     
     self.playerSnake.velocity = CGPointMake(0, abs(self.playerSnake.velocity.x));
+    
+    self.playerSnake.head.heading = kElementHeadingNorth;
 
-    SKAction *action = [SKAction rotateToAngle:0.0 duration:0.2 shortestUnitArc:YES];
-    [self.playerSnake.head.sprite runAction:action];
+//    SKAction *action = [SKAction rotateToAngle:0.0 duration:0.2 shortestUnitArc:YES];
+//    [self.playerSnake.head.sprite runAction:action];
 
 }
 
@@ -174,8 +180,25 @@
                 
                 element.velocity = velocityNew;
                 element.sprite.position = CGPointMake(element.sprite.position.x + xDifference, element.sprite.position.y + yDifference);
-                SKAction *action = [SKAction rotateToAngle:newAngle duration:0.2 shortestUnitArc:YES];
-                [element.sprite runAction:action];
+//                SKAction *action = [SKAction rotateToAngle:newAngle duration:0.2 shortestUnitArc:YES];
+//                [element.sprite runAction:action];
+                
+                if (element.velocity.x > 0) {
+                    NSLog(@"element change to east");
+                    element.heading = kElementHeadingEast;
+                } else if (element.velocity.x < 0) {
+                    NSLog(@"element change to west");
+                    element.heading = kElementHeadingWest;
+                }
+                
+                if (element.velocity.y > 0) {
+                    NSLog(@"element change to north");
+                    element.heading = kElementHeadingNorth;
+                } else if (element.velocity.y < 0) {
+                    NSLog(@"element change to south");
+                    element.heading = kElementHeadingSouth;
+                }
+                
                 if ([element isEqual:[self.playerSnake.elements lastObject]]) {
                     markToDelete = YES;
                     deleteDictionary = dict;

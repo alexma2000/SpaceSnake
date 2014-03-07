@@ -67,8 +67,8 @@
     }
     
     [self.elements addObject:element];
-    element.sprite.position = CGPointMake(lastElement.sprite.position.x + lastElement.velocity.x * 2.5 , lastElement.sprite.position.y + lastElement.velocity.y * 2.5);
-    element.sprite.zRotation = lastElement.sprite.zRotation;
+    element.sprite.position = CGPointMake(lastElement.sprite.position.x + lastElement.velocity.x * 3 , lastElement.sprite.position.y + lastElement.velocity.y * 3);
+    //element.sprite.zRotation = lastElement.sprite.zRotation;
     element.velocity = lastElement.velocity;
 }
 
